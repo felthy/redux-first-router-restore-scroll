@@ -8,7 +8,7 @@ export default (
 
   const behaviorStateStorage = stateStorage || new SessionStorage()
   const behavior = new ScrollBehavior({
-    addTransitionHook: history.listen,
+    addNavigationListener: history.listen,
     stateStorage: behaviorStateStorage,
     getCurrentLocation: () => ({
       ...history.location,
